@@ -1,0 +1,14 @@
+.myGrid{
+   width: 50vw;
+   height: 50vw;
+   background-color: rgb(80, 97, 74);
+   margin: auto;
+   padding: none;
+   display: flex;
+}
+
+.gridLine{
+   width:100%;
+   padding: none;
+   margin: none;
+}
