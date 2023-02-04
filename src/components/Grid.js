@@ -12,7 +12,7 @@ function Grid(props) {
         return (
           <div className="gridLine" key={items.id}>
             {items.map((subItem) => {
-              return <Box key={subItem.id} index={subItem.i} />;
+              return <Box key={subItem.id} i={subItem.i} j={subItem.j} />;
             })}
           </div>
         );

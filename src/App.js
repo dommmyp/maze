@@ -1,15 +1,16 @@
 import './App.css';
 import Grid from './components/Grid.js'
 import Navbar from './components/Navbar.js'
-import {myGrid, initBoxes} from "./components/calc.js";
+import {myGrid, initBoxes, generateMaze} from "./components/calc.js";
 import {useState} from 'react';
 
 
 function App() {
   const [count, setCount] = useState(6);
   const [boxes, setBoxes] = useState(null);
-  const up = () =>{
+  const setup = () =>{
     setBoxes(initBoxes());
+    // setBoxes(generateMaze(boxes));
   }
 
 
@@ -18,7 +19,7 @@ function App() {
       <div className="content">
         <Navbar />
         {boxes && <Grid boxes={boxes}/>}
-        <button onClick={() => up()}>{count}</button>
+        <button onClick={() => setup()}>Setup Maze</button>
       </div>
     </div>
   );
